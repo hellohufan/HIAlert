@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HIAlert'
-  s.version          = '0.1.5'
-  s.summary          = 'A short description of HIAlert.'
+  s.version          = '0.1.6'
+  s.summary          = '一个简单的弹出框组件'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
