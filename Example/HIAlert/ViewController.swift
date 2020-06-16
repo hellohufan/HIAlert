@@ -9,7 +9,6 @@
 import UIKit
 import HIAlert
 
-
 class ViewController: UIViewController {
     
     let types = ["普通样式", "UI普通样式",
@@ -72,13 +71,22 @@ class ViewController: UIViewController {
         }
         
         if tag == 0 {
-            view.title = title
-            view.message = message
-
-            view.addAction(action: action_one)
-            view.addAction(action: action_two)
-            view.show()
-//            let alert = HIAlert().alert
+//            view.title = title
+//            view.message = message
+//
+//            view.addAction(action: action_one)
+//            view.addAction(action: action_two)
+//            view.show()
+            
+            HIAlert.alert("提示", "message", ["取消", "确认"]) { action in
+                print(action.title as Any)
+                if action.title == "确认"{
+                    print("ok")
+                    return
+                }
+                print("other")
+            }
+            
         } else if tag == 2 {
             title = "修改控件位置"
             message = "修改控件位置后的样式"

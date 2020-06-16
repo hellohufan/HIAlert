@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HIAlert'
-  s.version          = '0.1.3'
+  s.version          = '0.1.5'
   s.summary          = 'A short description of HIAlert.'
 
 # This description is used to generate tags and improve search results.

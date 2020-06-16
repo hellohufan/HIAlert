@@ -1,20 +1,19 @@
 //
 //  HIAlert.swift
-//  FBSnapshotTestCase
+//  HIAlert
 //
 //  Created by hufan on 2020/6/16.
 //
 
 import Foundation
-
 import UIKit
 
-class HIAlert: HIAlertView {
+public class HIAlert: HIAlertView {
     
     ///MARK: 快速调用
     public class func alert(_ title: String, _ message: String, _ actions:[String], handler:((HIAlertAction)->Void)?) {
         
-        let alertView = HIAlertView()
+        let alertView = HIAlert()
         alertView.title = title
         alertView.message = message
         
@@ -40,7 +39,7 @@ class HIAlert: HIAlertView {
     
     override init(style: HIAlertViewStyle, title: String?, message: String?) {
         super.init(style: style, title: title, message: message)
-        let color : UIColor = UIColor(red: 4, green: 135, blue: 255, alpha: 1)
+        let color : UIColor = UIColor(red: 4/255.0, green: 135.0/255, blue: 255.0/255, alpha: 1)
         self.buttonColor = color
         self.cancelButtonColor = UIColor.white
         self.cancelButtonLayerBorderColor = color
