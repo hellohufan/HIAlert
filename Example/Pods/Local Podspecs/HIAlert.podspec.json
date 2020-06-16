@@ -1,7 +1,7 @@
 {
   "name": "HIAlert",
-  "version": "0.1.5",
-  "summary": "A short description of HIAlert.",
+  "version": "0.1.6",
+  "summary": "一个简单的弹出框组件",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/hellohufan/HIAlert",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/hellohufan/HIAlert.git",
-    "tag": "0.1.5"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "8.0"
