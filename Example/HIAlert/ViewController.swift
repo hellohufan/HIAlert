@@ -74,10 +74,11 @@ class ViewController: UIViewController {
         if tag == 0 {
             view.title = title
             view.message = message
-            
+
             view.addAction(action: action_one)
             view.addAction(action: action_two)
             view.show()
+//            let alert = HIAlert().alert
         } else if tag == 2 {
             title = "修改控件位置"
             message = "修改控件位置后的样式"
