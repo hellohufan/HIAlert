@@ -1,9 +1,9 @@
 //
-//  AEBaseAlertView.swift
-//  AEAlertView
+//  HIBaseAlertView.swift
+//  HIAlertView
 //
-//  代码地址: https://github.com/Allen0828/AEAlertView
-//  Copyright © 2018年 Allen. All rights reserved.
+//  代码地址: https://github.com/hellohufan/HIAlert.git
+//  Copyright © 2018年 IVAN. All rights reserved.
 //
 
 import UIKit
