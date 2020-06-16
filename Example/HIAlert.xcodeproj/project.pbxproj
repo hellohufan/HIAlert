@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		3F296354ADFC5D0E5AC5BCB1 /* Pods_HIAlert_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIAlert_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B06F224DFD698C4AE484300 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5B06F224DFD698C4AE484300 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* HIAlert_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIAlert_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,11 +41,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		79BEBB38977A7FDCEB80BEEC /* Pods-HIAlert_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIAlert_Tests.release.xcconfig"; path = "Target Support Files/Pods-HIAlert_Tests/Pods-HIAlert_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7A6D0D4FAA0A892026DC7107 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		7A6D0D4FAA0A892026DC7107 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		AB5C4301CE60C0FA89B34CA6 /* Pods-HIAlert_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIAlert_Example.release.xcconfig"; path = "Target Support Files/Pods-HIAlert_Example/Pods-HIAlert_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C5757C6D27CD1BE73CE7C3B0 /* Pods_HIAlert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HIAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9413C574F28636CE4A45AA3 /* Pods-HIAlert_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIAlert_Example.debug.xcconfig"; path = "Target Support Files/Pods-HIAlert_Example/Pods-HIAlert_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E67CC06BF64F18371E9B1244 /* HIAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HIAlert.podspec; path = ../HIAlert.podspec; sourceTree = "<group>"; };
+		E67CC06BF64F18371E9B1244 /* HIAlert.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HIAlert.podspec; path = ../HIAlert.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EC1CC54F92F196D488C91AC8 /* Pods-HIAlert_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HIAlert_Tests.debug.xcconfig"; path = "Target Support Files/Pods-HIAlert_Tests/Pods-HIAlert_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +147,6 @@
 				EC1CC54F92F196D488C91AC8 /* Pods-HIAlert_Tests.debug.xcconfig */,
 				79BEBB38977A7FDCEB80BEEC /* Pods-HIAlert_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -214,6 +213,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = L3N52HAY5N;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
@@ -228,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -503,6 +504,7 @@
 			baseConfigurationReference = C9413C574F28636CE4A45AA3 /* Pods-HIAlert_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N52HAY5N;
 				INFOPLIST_FILE = HIAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -518,6 +520,7 @@
 			baseConfigurationReference = AB5C4301CE60C0FA89B34CA6 /* Pods-HIAlert_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = L3N52HAY5N;
 				INFOPLIST_FILE = HIAlert/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

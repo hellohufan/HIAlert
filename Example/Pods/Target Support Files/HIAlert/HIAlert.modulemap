@@ -1,0 +1,6 @@
+framework module HIAlert {
+  umbrella header "HIAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}
