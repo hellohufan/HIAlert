@@ -46,7 +46,6 @@ class ViewController: UIViewController {
                 btn.backgroundColor = UIColor.blue
             }
             btn.addTarget(self, action: #selector(typeButtonClick), for: .touchUpInside)
-            
             view.addSubview(btn)
         }
     }
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     private func alertViewShowType(tag: Int) {
-        let view = HIAlertView(style: .defaulted)
+        let view = HIAlertView(style: .textField)
         var title = "默认"
         var message = "内容默认的样式"
         let action_one = HIAlertAction(title: "取消", style: .cancel) { (action) in
@@ -71,14 +70,7 @@ class ViewController: UIViewController {
         }
         
         if tag == 0 {
-//            view.title = title
-//            view.message = message
-//
-//            view.addAction(action: action_one)
-//            view.addAction(action: action_two)
-//            view.show()
-            
-            HIAlert.alert("提示", "message", ["取消", "确认"]) { action in
+            HIAlert.alert("提示", "message", ["取消", "确认", "好的"]) { action in
                 print(action.title as Any)
                 if action.title == "确认"{
                     print("ok")
