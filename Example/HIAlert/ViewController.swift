@@ -73,8 +73,12 @@ class ViewController: UIViewController {
             HIAlert.alert("提示", "message", ["取消", "确认", "好的"]) { action in
                 print(action.title as Any)
                 if action.title == "确认"{
-                    print("ok")
+                    print("确认")
                     return
+                }
+                if action.title == "好的"{
+                    print ("好的")
+                    return;
                 }
                 print("other")
             }

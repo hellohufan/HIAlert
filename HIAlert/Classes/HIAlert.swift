@@ -32,14 +32,9 @@ public class HIAlert: HIAlertView {
         alertView.title = title
         alertView.message = message
         
-        let cancel = HIAlertAction(title: actions[0], style: .cancel) { (action) in
-            print("取消")
-            alertView.dismiss()
-        }
-        alertView.addAction(action: cancel)
-        
-        if actions.count > 1 {
-            let def = HIAlertAction(title: actions[1], style: .defaulted) { (action) in
+        for i in 0..<actions.count{
+            let title = actions[i]
+            let def = HIAlertAction(title: title, style: .defaulted) { (action) in
                 if handler != nil {
                     handler!(action)
                 }
@@ -48,15 +43,31 @@ public class HIAlert: HIAlertView {
             alertView.addAction(action: def)
         }
         
-        if actions.count > 2{
-            let def = HIAlertAction(title: actions[2], style: .defaulted) { (action) in
-                if handler != nil {
-                    handler!(action)
-                }
-                alertView.dismiss()
-            }
-            alertView.addAction(action: def)
-        }
+//        let cancel = HIAlertAction(title: actions[0], style: .cancel) { (action) in
+//            print("取消")
+//            alertView.dismiss()
+//        }
+//        alertView.addAction(action: cancel)
+//
+//        if actions.count > 1 {
+//            let def = HIAlertAction(title: actions[1], style: .defaulted) { (action) in
+//                if handler != nil {
+//                    handler!(action)
+//                }
+//                alertView.dismiss()
+//            }
+//            alertView.addAction(action: def)
+//        }
+//
+//        if actions.count > 2{
+//            let def = HIAlertAction(title: actions[2], style: .defaulted) { (action) in
+//                if handler != nil {
+//                    handler!(action)
+//                }
+//                alertView.dismiss()
+//            }
+//            alertView.addAction(action: def)
+//        }
         
         alertView.show()
     }
