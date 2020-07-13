@@ -24,16 +24,13 @@ public class HIAlert: HIAlertView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    //MARK: 快速调用
-    public class func alert(_ title: String, _ message: String, _ actions:[String], handler:((HIAlertAction)->Void)?) {
-        
-        let alertView = HIAlert()
+    public class func alert(_ title: String, _ message: String, _ actionTitles:[String], handler:((HIAlertAction)->Void)?) {
+        let alertView = HIAlert(style: .defaulted, title: title, message: message)
         alertView.title = title
         alertView.message = message
         
-        for i in 0..<actions.count{
-            let title = actions[i]
+        for i in 0..<actionTitles.count{
+            let title = actionTitles[i]
             let def = HIAlertAction(title: title, style: .defaulted) { (action) in
                 if handler != nil {
                     handler!(action)
@@ -43,34 +40,22 @@ public class HIAlert: HIAlertView {
             alertView.addAction(action: def)
         }
         
-//        let cancel = HIAlertAction(title: actions[0], style: .cancel) { (action) in
-//            print("取消")
-//            alertView.dismiss()
-//        }
-//        alertView.addAction(action: cancel)
-//
-//        if actions.count > 1 {
-//            let def = HIAlertAction(title: actions[1], style: .defaulted) { (action) in
-//                if handler != nil {
-//                    handler!(action)
-//                }
-//                alertView.dismiss()
-//            }
-//            alertView.addAction(action: def)
-//        }
-//
-//        if actions.count > 2{
-//            let def = HIAlertAction(title: actions[2], style: .defaulted) { (action) in
-//                if handler != nil {
-//                    handler!(action)
-//                }
-//                alertView.dismiss()
-//            }
-//            alertView.addAction(action: def)
-//        }
-        
         alertView.show()
     }
     
-    
+    public class func alertInput(title: String, message: String, placeholder: String, actionTitles:[String], handler:((HIAlertAction, String)->Void)?){
+        let textView = HIAlert(style: .textField, title: title, message: message)
+        textView.textField.placeholder = placeholder
+        for i in 0..<actionTitles.count {
+            let title = actionTitles[i]
+            let def = HIAlertAction(title: title, style: .defaulted) { (action) in
+                if handler != nil, let text = textView.textField.text{
+                    handler!(action, text)
+                }
+                textView.dismiss()
+            }
+            textView.addAction(action: def)
+        }
+        textView.show()
+    }
 }
