@@ -209,7 +209,6 @@ class ViewController: UIViewController {
             view.title = title
             view.message = message
             view.actionSplitLine = UIColor.orange
-            
             view.addAction(action: action_one)
             view.addAction(action: action_two)
             view.show()
@@ -224,7 +223,6 @@ class ViewController: UIViewController {
             view.animationViewTopMargin = 0
             view.contentViewTopMargin = 0
             view.actionViewTopMargin = 0
-            
             view.addAction(action: action_one)
             view.show()
         }else if tag == 5 {
@@ -324,7 +322,6 @@ class baseAlertView: HIBaseAlertView {
         let rect = UIScreen.main.bounds
         super.init(frame: rect)
         
-//        backgroundColor = UIColor.darkGray
         titleLabel.backgroundColor = UIColor.purple
         titlePadding = 0
         titleTopMargin = 0
