@@ -28,7 +28,6 @@ public class HIAlert: HIAlertView {
         let alertView = HIAlert(style: .defaulted, title: title, message: message)
         alertView.title = title
         alertView.message = message
-        
         for i in 0..<actionTitles.count{
             let title = actionTitles[i]
             let def = HIAlertAction(title: title, style: .defaulted) { (action) in
@@ -43,10 +42,10 @@ public class HIAlert: HIAlertView {
         alertView.show()
     }
     
-    public class func alertInput(title: String, message: String, placeholder: String, actionTitles:[String], handler:((HIAlertAction, String)->Void)?){
+    public class func alertInput(title: String, message: String, placeholder: String, actionTitles:[String]!, handler:((HIAlertAction, String)->Void)?){
         let textView = HIAlert(style: .textField, title: title, message: message)
         textView.textField.placeholder = placeholder
-        for i in 0..<actionTitles.count {
+        for i in 0..<actionTitles!.count {
             let title = actionTitles[i]
             let def = HIAlertAction(title: title, style: .defaulted) { (action) in
                 if handler != nil, let text = textView.textField.text{

@@ -32,11 +32,9 @@ class TableOfContentsSpec: QuickSpec {
 
                 it("will eventually pass") {
                     var time = "passing"
-
                     DispatchQueue.main.async {
                         time = "done"
                     }
-
                     waitUntil { done in
                         Thread.sleep(forTimeInterval: 0.5)
                         expect(time) == "done"
