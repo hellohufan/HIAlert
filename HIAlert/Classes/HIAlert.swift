@@ -18,21 +18,22 @@ public class HIAlert: HIAlertView {
         self.cancelButtonLayerBorderColor = color
         self.cancelButtonTitleColor = color
         self.titleTopMargin = 16
+        self.textField.font = UIFont.systemFont(ofSize: 15)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public class func alert(_ title: String, _ message: String, _ actionTitles:[String], handler:((HIAlertAction)->Void)?) {
+    public class func alert(_ title: String!, _ message: String!, _ actionTitles:[String]!, handler:((HIAlertAction)->Void)?) {
         let alertView = HIAlert(style: .defaulted, title: title, message: message)
         alertView.title = title
         alertView.message = message
         for i in 0..<actionTitles.count{
             let title = actionTitles[i]
             let def = HIAlertAction(title: title, style: .defaulted) { (action) in
-                if handler != nil {
-                    handler!(action)
+                if let _handler = handler {
+                    _handler(action)
                 }
                 alertView.dismiss()
             }
@@ -47,13 +48,13 @@ public class HIAlert: HIAlertView {
         textView.textField.placeholder = placeholder
         for i in 0..<actionTitles!.count {
             let title = actionTitles[i]
-            let def = HIAlertAction(title: title, style: .defaulted) { (action) in
-                if handler != nil, let text = textView.textField.text{
-                    handler!(action, text)
+            let action = HIAlertAction(title: title, style: .defaulted) { (action) in
+                if let block = handler, let text = textView.textField.text{
+                    block(action, text)
                 }
                 textView.dismiss()
             }
-            textView.addAction(action: def)
+            textView.addAction(action: action)
         }
         textView.show()
     }
