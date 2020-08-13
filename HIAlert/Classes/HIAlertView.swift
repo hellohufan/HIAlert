@@ -263,9 +263,9 @@ extension HIAlertView {
     private func showAlert() {
         createActions()
         if #available(iOS 13, *) {
-            UIApplication.shared.keyWindow?.addSubview(self)
+            UIApplication.shared.keyWindow?.rootViewController?.view.addSubview(self)
         } else {
-            UIApplication.shared.delegate?.window??.addSubview(self)
+            UIApplication.shared.delegate?.window??.rootViewController?.view.addSubview(self)
         }
         if isObserverKeyboard {
 //            NotificationCenter.default.addObserver(self, selector: #selector(keyBoardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
